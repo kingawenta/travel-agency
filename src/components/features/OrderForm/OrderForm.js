@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 //import styles from '../../features/Order/OrderForm.scss';
 
 
-const OrderForm = props => {
+const OrderForm = props => (
   <Row>
     <Col xs={12}>
       <OrderSummary cost={props.tripCost} options={props.options}/>
     </Col>
-  </Row>;
-};
+  </Row>
+);
 
 OrderForm.propTypes = {
   cost: PropTypes.string,
