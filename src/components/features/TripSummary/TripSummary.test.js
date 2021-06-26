@@ -70,15 +70,10 @@ describe('Component TripSummary', () => {
   });
 
   it('should not render div tags if props tag is false', () => {
-    const expectedId = 'abc';
-    const expectedName = 'alt';
-    const expectedCost = '100';
-    const expectedDays = 7;
-    const expectedTags = ['tag1', 'tag2', 'tag3'];
 
-    const component = shallow(<TripSummary name={expectedName} cost={expectedCost} days={expectedDays} id={expectedId} tags={expectedTags}/>);
+    const component = shallow(<TripSummary />);
 
-    expect(component.hasClass('tags')).toBe(false);
+    expect(component.find('.tags')).toBeFalsy;
 
   });
 
